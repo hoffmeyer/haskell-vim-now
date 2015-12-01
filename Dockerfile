@@ -14,6 +14,13 @@ RUN apt-get update \
  && apt-get install -y stack \
  && apt-get clean
 
+# install tmux
+RUN apt-get update \
+ && apt-get install -y tmux \
+ && apt-get clean
+
+COPY .tmux.conf /root/
+
 # Haskell Vim setup
 ADD https://raw.githubusercontent.com/begriffs/haskell-vim-now/master/install.sh /install.sh
 RUN /bin/bash /install.sh
