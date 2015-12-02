@@ -20,6 +20,7 @@ RUN apt-get update \
  && apt-get clean
 
 COPY .tmux.conf /root/
+COPY .bashrc /root/
 
 # Haskell Vim setup
 ADD https://raw.githubusercontent.com/begriffs/haskell-vim-now/master/install.sh /install.sh
